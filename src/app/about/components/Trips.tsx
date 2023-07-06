@@ -1,16 +1,14 @@
-import { prisma } from "@/lib/prisma"
+import { prisma } from '@/lib/prisma'
 
 const getTrips = async () => {
-   const trips = await prisma.trip.findMany({})
+  const trips = await prisma.trip.findMany({})
 
-   return trips
+  return trips
 }
 
 export default async function Trips() {
-   const data = await getTrips()
+  const data = await getTrips()
 
-   console.log({ data })
-   return (
-      <div>Trips</div>
-   )
+  console.log({ data })
+  return <div>Trips</div>
 }

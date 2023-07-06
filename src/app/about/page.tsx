@@ -1,12 +1,13 @@
-import Trips from "./components/Trips"
+import Trips from './components/Trips'
 
 export const metadata = {
-   title: "About",
+  title: 'About',
 }
 
 export default function About() {
-   return (
-      <div><Trips /></div>
-   )
+  return (
+    <div>
+      <Trips />
+    </div>
+  )
 }
-
