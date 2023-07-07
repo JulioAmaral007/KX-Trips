@@ -4,10 +4,9 @@ import { Button } from '@/components/Button'
 import DatePicker from '@/components/DatePicker'
 import Input from '@/components/Input'
 
+import { differenceInDays } from 'date-fns'
 import { useRouter } from 'next/navigation'
 import { Controller, useForm } from 'react-hook-form'
-
-import { differenceInDays } from 'date-fns'
 
 interface TripReservationProps {
   tripId: string

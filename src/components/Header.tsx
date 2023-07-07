@@ -48,7 +48,7 @@ export function Header() {
           />
 
           <Image
-            src={data.user.image}
+            src={data.user.image!}
             width={30}
             height={30}
             alt={data.user.name!}
