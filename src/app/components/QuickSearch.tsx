@@ -35,7 +35,7 @@ export function QuickSearch() {
 
         <div className="flex flex-col items-center gap-1">
           <Link
-            href="/trips/search?text=Chalé"
+            href="/trips/search?text=chale"
             className="flex flex-col items-center hover:text-primary transition-all"
           >
             <Image width={35} height={35} src="/cottage-icon.png" alt="Chalé" />
@@ -50,6 +50,36 @@ export function QuickSearch() {
           >
             <Image width={35} height={35} src="/inn-icon.png" alt="Pousada" />
             <p className="text-sm text-grayPrimary">Pousada</p>
+          </Link>
+        </div>
+
+        <div className="flex flex-col items-center gap-1">
+          <Link
+            href="/trips/search?text=pontos-turisticos"
+            className="flex flex-col items-center hover:text-primary transition-all"
+          >
+            <Image
+              width={35}
+              height={35}
+              src="/castle-icon.png"
+              alt="Pontos Turísticos"
+            />
+            <p className="text-sm text-grayPrimary">Pontos Turísticos</p>
+          </Link>
+        </div>
+
+        <div className="flex flex-col items-center gap-1">
+          <Link
+            href="/trips/search?text=resorts"
+            className="flex flex-col items-center hover:text-primary transition-all"
+          >
+            <Image
+              width={35}
+              height={35}
+              src="/resorts-icon.png"
+              alt="Resorts"
+            />
+            <p className="text-sm text-grayPrimary">Resorts</p>
           </Link>
         </div>
       </div>
