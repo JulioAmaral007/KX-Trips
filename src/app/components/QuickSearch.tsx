@@ -76,7 +76,7 @@ export function QuickSearch() {
             <Image
               width={35}
               height={35}
-              src="/resorts-icon.png"
+              src="/resort-icon.png"
               alt="Resorts"
             />
             <p className="text-sm text-grayPrimary">Resorts</p>
