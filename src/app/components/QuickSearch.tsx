@@ -12,7 +12,7 @@ export function QuickSearch() {
         <div className="w-full h-[1px] bg-grayLighter"></div>
       </div>
 
-      <div className="flex w-full justify-between mt-5">
+      <div className="flex w-full justify-center mt-5 flex-wrap gap-5 lg:justify-evenly lg:gap-0 ">
         <div className="flex flex-col items-center gap-1">
           <Link
             href={`/trips/search?text=hotel`}

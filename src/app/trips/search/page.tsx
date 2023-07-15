@@ -38,7 +38,7 @@ export default function Trips() {
           : 'Não encontramos nada nos seus parâmetros! =('}
       </h2>
 
-      <div className="flex flex-col gap-4 lg:grid lg:grid-cols-4 lg:gap-10 lg:mt-6 lg:pb-16">
+      <div className="flex flex-col gap-4 lg:grid lg:grid-cols-4 lg:gap-10 lg:mt-6 lg:pb-16 md:grid md:grid-cols-2">
         {trips?.map((trip) => (
           <TripItem key={trip.id} trip={trip} />
         ))}

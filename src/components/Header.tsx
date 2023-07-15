@@ -1,26 +1,30 @@
 'use client'
-import React from 'react'
 
-import Image from 'next/image'
+import { Avatar, AvatarImage } from '@/components/ui/avatar'
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuLabel,
+  DropdownMenuSeparator,
+  DropdownMenuTrigger,
+} from '@/components/ui/dropdown-menu'
+
 import Link from 'next/link'
 
 import { signIn, signOut, useSession } from 'next-auth/react'
 
+import Image from 'next/image'
 import { AiOutlineMenu } from 'react-icons/ai'
 
 export function Header() {
-  const [menuIsOpen, setMenuIsOpen] = React.useState(false)
-
   const { status, data } = useSession()
 
   const handleSignIn = () => signIn()
 
   const handleSignOut = () => {
-    setMenuIsOpen(false)
     signOut()
   }
-
-  const handleMenuClick = () => setMenuIsOpen(!menuIsOpen)
 
   return (
     <div className="container mx-auto p-5 py-0 h-[93px] flex justify-between items-center lg:border-b lg:border-grayLighter">
@@ -41,36 +45,33 @@ export function Header() {
 
       {status === 'authenticated' && data.user && (
         <div className="flex items-center gap-3 border-grayLighter border border-solid rounded-full p-2 px-3 relative">
-          <AiOutlineMenu
-            size={16}
-            onClick={handleMenuClick}
-            className="cursor-pointer"
-          />
-
-          <Image
-            height={35}
-            width={35}
-            src={data.user.image!}
-            alt={data.user.name!}
-            className="rounded-full shadow-md"
-          />
-
-          {menuIsOpen && (
-            <div className="z-50 absolute top-14 left-0 w-full h-[100px] bg-white rounded-lg shadow-md flex flex-col justify-center items-center">
-              <Link href="/my-trips" onClick={() => setMenuIsOpen(false)}>
-                <button className="text-primary pb-2 border-b border-grayLighter border-solid text-sm font-semibold">
-                  Minhas Viagens
-                </button>
-              </Link>
-
-              <button
-                className="text-primary pt-2 text-sm font-semibold"
+          <DropdownMenu>
+            <DropdownMenuTrigger>
+              <AiOutlineMenu size={20} className="cursor-pointer" />
+            </DropdownMenuTrigger>
+            <DropdownMenuContent className="bg-white mt-2">
+              <DropdownMenuLabel className="pb-2 border-b border-grayLighter border-solid">
+                My Account
+              </DropdownMenuLabel>
+              <DropdownMenuSeparator />
+              <DropdownMenuItem className="text-primary pb-2 border-b border-grayLighter border-solid text-sm font-semibold cursor-pointer">
+                Profile
+              </DropdownMenuItem>
+              <DropdownMenuItem className="text-primary pb-2 border-b border-grayLighter border-solid text-sm font-semibold cursor-pointer">
+                <Link href="/my-trips">Minhas Viagens</Link>
+              </DropdownMenuItem>
+              <DropdownMenuItem
+                className="text-primary pt-2 text-sm font-semibold cursor-pointer"
                 onClick={handleSignOut}
               >
                 Logout
-              </button>
-            </div>
-          )}
+              </DropdownMenuItem>
+            </DropdownMenuContent>
+          </DropdownMenu>
+
+          <Avatar>
+            <AvatarImage src={data.user.image!} alt={data.user.name!} />
+          </Avatar>
         </div>
       )}
     </div>

@@ -11,7 +11,7 @@ export function TripItem({ trip }: TripItemProps) {
   return (
     <Link href={`/trips/${trip.id}`}>
       <div className="flex flex-col">
-        <div className="relative h-[280px] w-[280px]">
+        <div className="relative h-[280px] w-[280px] lg:h-[250px] lg:w-[250px]">
           <Image
             src={trip.coverImage}
             className="rounded-lg shadow-md"
