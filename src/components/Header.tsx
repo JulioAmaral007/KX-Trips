@@ -46,17 +46,20 @@ export function Header() {
       {status === 'authenticated' && data.user && (
         <div className="flex items-center gap-3 border-grayLighter border border-solid rounded-full p-2 px-3 relative">
           <DropdownMenu>
-            <DropdownMenuTrigger>
+            <DropdownMenuTrigger className="flex items-center gap-2">
               <AiOutlineMenu size={20} className="cursor-pointer" />
+              <Avatar>
+                <AvatarImage src={data.user.image!} alt={data.user.name!} />
+              </Avatar>
             </DropdownMenuTrigger>
-            <DropdownMenuContent className="bg-white mt-2">
+            <DropdownMenuContent className="bg-white mt-2 mr-3">
               <DropdownMenuLabel className="pb-2 border-b border-grayLighter border-solid">
                 My Account
               </DropdownMenuLabel>
               <DropdownMenuSeparator />
-              <DropdownMenuItem className="text-primary pb-2 border-b border-grayLighter border-solid text-sm font-semibold cursor-pointer">
-                Profile
-              </DropdownMenuItem>
+              {/* <DropdownMenuItem className="text-primary pb-2 border-b border-grayLighter border-solid text-sm font-semibold cursor-pointer">
+                <Link href="/profile">Meu Perfil</Link>
+              </DropdownMenuItem> */}
               <DropdownMenuItem className="text-primary pb-2 border-b border-grayLighter border-solid text-sm font-semibold cursor-pointer">
                 <Link href="/my-trips">Minhas Viagens</Link>
               </DropdownMenuItem>
@@ -68,10 +71,6 @@ export function Header() {
               </DropdownMenuItem>
             </DropdownMenuContent>
           </DropdownMenu>
-
-          <Avatar>
-            <AvatarImage src={data.user.image!} alt={data.user.name!} />
-          </Avatar>
         </div>
       )}
     </div>
