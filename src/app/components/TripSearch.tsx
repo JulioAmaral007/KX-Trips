@@ -10,7 +10,7 @@ import { Controller, useForm } from 'react-hook-form'
 
 interface TripSearchForm {
   text: string
-  startDate: Date | null
+  endDate: Date | null
   budget: string
 }
 
@@ -27,7 +27,7 @@ export function TripSearch() {
   const onSubmit = (data: TripSearchForm) => {
     router.push(
       `/trips/search?text=
-      ${data.text}&startDate=${data.startDate?.toISOString()}&budget=
+      ${data.text}&endDate=${data.endDate?.toISOString()}&budget=
       ${data.budget}`,
     )
   }
@@ -52,7 +52,7 @@ export function TripSearch() {
 
         <div className="flex gap-4 lg:w-full">
           <Controller
-            name="startDate"
+            name="endDate"
             control={control}
             render={({ field }) => (
               <DatePicker
