@@ -10,6 +10,8 @@ async function main() {
         startDate: new Date('2023-07-03'),
         endDate: new Date('2023-07-30'),
         location: 'Amalfi, Itália',
+        locationDescription:
+          'Amalfi é uma cidade localizada na região da Campânia, no sul da Itália. Ela está situada na famosa Costa Amalfitana, que se estende ao longo da costa do Golfo de Salerno, no Mar Tirreno. A cidade de Amalfi está aninhada entre montanhas íngremes e o mar azul-cobalto, criando uma paisagem deslumbrante. A sua localização privilegiada oferece vistas panorâmicas deslumbrantes e uma atmosfera encantadora.',
         countryCode: 'IT',
         coverImage:
           'https://images.unsplash.com/photo-1455587734955-081b22074882?ixlib=rb-4.0.3&ixid=M3wxMA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80',
@@ -37,6 +39,8 @@ async function main() {
         startDate: new Date('2023-07-03'),
         endDate: new Date('2023-07-30'),
         location: 'New York, Estados Unidos',
+        locationDescription:
+          'Nova York, também conhecida como Nova Iorque, é uma cidade vibrante e cosmopolita localizada na costa leste dos Estados Unidos. É a cidade mais populosa do país e um dos principais centros financeiros, culturais e comerciais do mundo. Localizada no estado de Nova York, a cidade abrange cinco distritos principais: Manhattan, Brooklyn, Queens, The Bronx e Staten Island. Manhattan é o coração da cidade e abriga muitas das atrações mais famosas, como a Times Square, o Central Park, a Quinta Avenida, a Broadway e a Estátua da Liberdade.',
         countryCode: 'US',
         coverImage:
           'https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80',
@@ -64,6 +68,8 @@ async function main() {
         startDate: new Date('2023-07-03'),
         endDate: new Date('2023-07-30'),
         location: 'Florença, Itália',
+        locationDescription:
+          'Florença, ou Firenze em italiano, é uma cidade histórica e culturalmente rica localizada na região da Toscana, no centro da Itália. É considerada um dos berços do Renascimento e é conhecida por sua arquitetura deslumbrante, arte renomada, história fascinante e charme romântico. Florença está situada às margens do rio Arno e é cercada por colinas verdejantes. A cidade possui um centro histórico compacto e facilmente explorável a pé, onde os visitantes podem apreciar a beleza de suas ruas de paralelepípedos, praças pitorescas e palácios imponentes.',
         countryCode: 'IT',
         coverImage:
           'https://images.unsplash.com/photo-1534612899740-55c821a90129?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80',
@@ -91,6 +97,8 @@ async function main() {
         startDate: new Date('2023-07-03'),
         endDate: new Date('2023-07-30'),
         location: 'Lago Sereno, Suíça',
+        locationDescription:
+          'Lago Sereno, também conhecido como Lago Thun, é uma bela localidade situada na Suíça, na região dos Alpes Berneses. O lago é um dos dois principais lagos da região de Berna, sendo o outro o Lago de Brienz. Juntos, eles oferecem uma paisagem deslumbrante e atividades encantadoras para os visitantes. Rodeado por montanhas imponentes, o Lago Sereno possui águas calmas e cristalinas, refletindo as paisagens circundantes. Sua localização idílica torna-o um destino popular para aqueles que desejam desfrutar da natureza e da serenidade. As margens do lago são pontilhadas por pequenas aldeias pitorescas e vilas encantadoras, que acrescentam um charme adicional à região.',
         countryCode: 'CH',
         coverImage:
           'https://images.unsplash.com/photo-1568084680786-a84f91d1153c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1374&q=80',
@@ -118,6 +126,8 @@ async function main() {
         startDate: new Date('2023-07-03'),
         endDate: new Date('2023-07-30'),
         location: 'Madrid, Espanha',
+        locationDescription:
+          'Madrid é a capital e maior cidade da Espanha, localizada no coração do país, na região central conhecida como Planície de Castela. É uma cidade vibrante, cosmopolita e repleta de história, arte, cultura e gastronomia. Madrid é famosa por sua arquitetura impressionante, que combina estilos antigos e contemporâneos. A Puerta del Sol é o centro simbólico da cidade, onde se encontra o famoso Relógio da Casa dos Correios e o ponto quilométrico zero das estradas espanholas. A Plaza Mayor, uma praça histórica do século XVII, é outro ponto de destaque, com sua arquitetura elegante e arcadas impressionantes.',
         countryCode: 'ES',
         coverImage:
           'https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80',
@@ -145,6 +155,8 @@ async function main() {
         startDate: new Date('2023-07-03'),
         endDate: new Date('2023-07-30'),
         location: 'Montreal, Canadá',
+        locationDescription:
+          'Montreal é uma cidade cosmopolita e culturalmente rica localizada na província de Quebec, no Canadá. É a maior cidade da província e a segunda maior do país, oferecendo uma mistura cativante de influências francesas e inglesas, bem como uma atmosfera única e vibrante. A cidade está situada na ilha de Montreal, às margens do rio São Lourenço. A paisagem é marcada por colinas, parques e belos espaços verdes, tornando-a uma cidade agradável para se explorar. Montreal é conhecida por sua arquitetura diversificada, com uma mistura de edifícios históricos e modernos que refletem sua rica história.',
         countryCode: 'CA',
         coverImage:
           'https://images.unsplash.com/photo-1596394516093-501ba68a0ba6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80',
@@ -172,6 +184,8 @@ async function main() {
         startDate: new Date('2023-07-03'),
         endDate: new Date('2023-07-30'),
         location: 'Oslo, Noruega',
+        locationDescription:
+          'Oslo é a capital e a maior cidade da Noruega, situada na costa sul do país, na entrada do fiorde de Oslo. É uma cidade moderna, vibrante e cheia de beleza natural, oferecendo uma combinação perfeita entre vida urbana e paisagens deslumbrantes. A localização de Oslo à beira-mar e cercada por colinas e florestas confere à cidade um charme único. O fiorde de Oslo, com suas águas tranquilas e enseadas pitorescas, é um dos principais atrativos da cidade. Os visitantes podem desfrutar de passeios de barco pelo fiorde para apreciar as vistas panorâmicas e explorar pequenas ilhas próximas.',
         countryCode: 'NO',
         coverImage:
           'https://images.unsplash.com/photo-1610530531783-56a4e92a3305?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80',
@@ -199,6 +213,8 @@ async function main() {
         startDate: new Date('2023-07-03'),
         endDate: new Date('2023-07-30'),
         location: 'Amsterdam, Holanda',
+        locationDescription:
+          'Amsterdam é a capital e a maior cidade dos Países Baixos, localizada na província da Holanda do Norte. É uma cidade charmosa, com uma atmosfera única e uma rica herança cultural, tornando-se um dos destinos turísticos mais populares da Europa. Amsterdam é conhecida por seus belos canais, arquitetura histórica e rica história. Os canais da cidade, que são Patrimônio Mundial da UNESCO, formam uma rede intricada que serpenteia por toda a cidade, criando uma paisagem encantadora. Passear de barco pelos canais é uma das atividades mais populares entre os visitantes, permitindo que apreciem a beleza arquitetônica e a atmosfera única de Amsterdam.',
         countryCode: 'NL',
         coverImage:
           'https://images.unsplash.com/photo-1500076656116-558758c991c1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1471&q=80',
@@ -226,6 +242,8 @@ async function main() {
         startDate: new Date('2023-07-03'),
         endDate: new Date('2023-07-30'),
         location: 'Paris, França',
+        locationDescription:
+          'Paris, a capital da França, é uma cidade icônica e romântica, conhecida como "Cidade Luz" e considerada um dos destinos mais encantadores do mundo. Localizada no noroeste do país, às margens do rio Sena, Paris é um importante centro cultural, artístico e histórico. A cidade é famosa por sua arquitetura deslumbrante, com marcos emblemáticos que encantam os visitantes. A Torre Eiffel é o símbolo mais reconhecido de Paris, oferecendo vistas panorâmicas deslumbrantes da cidade. A Catedral de Notre-Dame é outra atração impressionante, com sua arquitetura gótica majestosa e vitrais deslumbrantes. O Arco do Triunfo, a Basílica de Sacré-Cœur e o Louvre, com sua icônica pirâmide de vidro, são apenas alguns exemplos dos tesouros arquitetônicos da cidade.',
         countryCode: 'FR',
         coverImage:
           'https://images.unsplash.com/photo-1515496281361-241a540151a5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1471&q=80',
