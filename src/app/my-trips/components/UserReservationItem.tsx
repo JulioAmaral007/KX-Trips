@@ -1,4 +1,15 @@
 import { Button } from '@/components/Button'
+import {
+  AlertDialog,
+  AlertDialogAction,
+  AlertDialogCancel,
+  AlertDialogContent,
+  AlertDialogDescription,
+  AlertDialogFooter,
+  AlertDialogHeader,
+  AlertDialogTitle,
+  AlertDialogTrigger,
+} from '@/components/ui/alert-dialog'
 import { Prisma } from '@prisma/client'
 import { format } from 'date-fns'
 import { ptBR } from 'date-fns/locale'
@@ -93,9 +104,29 @@ export function UserReservationItem({
             </p>
           </div>
 
-          <Button variant="danger" className="mt-5" onClick={handleDeleteClick}>
-            Cancelar
-          </Button>
+          <AlertDialog>
+            <AlertDialogTrigger>
+              <Button variant="danger" className="mt-5">
+                Cancelar
+              </Button>
+            </AlertDialogTrigger>
+            <AlertDialogContent>
+              <AlertDialogHeader>
+                <AlertDialogTitle>Você tem certeza?</AlertDialogTitle>
+                <AlertDialogDescription>
+                  Essa ação não poderá ser desfeita.
+                </AlertDialogDescription>
+              </AlertDialogHeader>
+              <AlertDialogFooter className="text-white">
+                <AlertDialogCancel className="bg-primaryDarker">
+                  Cancel
+                </AlertDialogCancel>
+                <AlertDialogAction onClick={handleDeleteClick}>
+                  Continue
+                </AlertDialogAction>
+              </AlertDialogFooter>
+            </AlertDialogContent>
+          </AlertDialog>
         </div>
       </div>
     </div>
