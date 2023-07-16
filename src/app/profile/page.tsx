@@ -31,7 +31,7 @@ export default function Profile() {
 
   const router = useRouter()
 
-  const handleDeleteClick = () => { }
+  const handleDeleteClick = () => {}
 
   useEffect(() => {
     if (status === 'unauthenticated') {
