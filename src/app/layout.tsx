@@ -16,7 +16,7 @@ const poppins = Poppins({
 })
 
 export const metadata = {
-  title: 'Amaral Trips',
+  title: 'KX Trips',
   description: 'Sistema de Reserva de Viagens TOP!',
 }
 
