@@ -1,9 +1,9 @@
 import { TripItem } from '@/components/ui/tripItem'
-import { prisma } from '@/lib/prisma'
+import { prismaClient } from '@/lib/prisma'
 import { Trip } from '@prisma/client'
 
 async function getTrips() {
-  const trips = await prisma.trip.findMany({})
+  const trips = await prismaClient.trip.findMany({})
 
   return trips
 }

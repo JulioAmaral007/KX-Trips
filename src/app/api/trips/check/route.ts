@@ -1,4 +1,3 @@
-import { prisma } from '@/lib/prisma'
 import { differenceInDays, isBefore } from 'date-fns'
 import { NextResponse } from 'next/server'
 
