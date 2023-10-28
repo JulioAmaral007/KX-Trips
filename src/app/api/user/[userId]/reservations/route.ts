@@ -1,3 +1,4 @@
+import { prismaClient } from '@/lib/prisma'
 import { NextResponse } from 'next/server'
 
 export async function GET(
@@ -15,7 +16,7 @@ export async function GET(
     }
   }
 
-  const reservations = await prisma.tripReservation.findMany({
+  const reservations = await prismaClient.tripReservation.findMany({
     where: {
       userId,
     },

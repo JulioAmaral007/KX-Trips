@@ -1,10 +1,11 @@
+import { prismaClient } from '@/lib/prisma'
 import { differenceInDays, isBefore } from 'date-fns'
 import { NextResponse } from 'next/server'
 
 export async function POST(request: Request) {
   const req = await request.json()
 
-  const trip = await prisma.trip.findUnique({
+  const trip = await prismaClient.trip.findUnique({
     where: {
       id: req.tripId,
     },
@@ -47,7 +48,7 @@ export async function POST(request: Request) {
     )
   }
 
-  const reservations = await prisma.tripReservation.findMany({
+  const reservations = await prismaClient.tripReservation.findMany({
     where: {
       tripId: req.tripId,
       // VERIFICA SE EXISTE RESERVA ENTRE AS DATAS

@@ -1,3 +1,4 @@
+import { prismaClient } from '@/lib/prisma'
 import { NextResponse } from 'next/server'
 
 export async function POST(request: Request) {
@@ -5,7 +6,7 @@ export async function POST(request: Request) {
 
   const { startDate, endDate, userId, tripId, totalPaid, guests } = req
 
-  const trip = await prisma.trip.findUnique({
+  const trip = await prismaClient.trip.findUnique({
     where: {
       id: tripId,
     },
@@ -21,7 +22,7 @@ export async function POST(request: Request) {
     )
   }
 
-  await prisma.tripReservation.create({
+  await prismaClient.tripReservation.create({
     data: {
       startDate: new Date(startDate),
       endDate: new Date(endDate),

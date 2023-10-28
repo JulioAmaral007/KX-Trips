@@ -1,3 +1,4 @@
+import { prismaClient } from '@/lib/prisma'
 import { NextResponse } from 'next/server'
 
 export async function DELETE(
@@ -13,7 +14,7 @@ export async function DELETE(
     }
   }
 
-  const reservation = await prisma.tripReservation.delete({
+  const reservation = await prismaClient.tripReservation.delete({
     where: {
       id: reservationId,
     },
