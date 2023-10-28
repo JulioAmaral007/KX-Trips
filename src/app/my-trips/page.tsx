@@ -6,7 +6,7 @@ import Link from 'next/link'
 import { useRouter } from 'next/navigation'
 import { useEffect, useState } from 'react'
 
-import { Button } from '@/components/Button'
+import { Button } from '@/components/ui/button'
 import { UserReservationItem } from './components/UserReservationItem'
 
 export default function MyTrips() {
@@ -40,9 +40,7 @@ export default function MyTrips() {
 
   return (
     <div className="container mx-auto p-5">
-      <h1 className="font-semibold text-primaryDarker text-xl lg:mb-5">
-        Minhas Viagens
-      </h1>
+      <h1 className="font-semibold text-xl lg:mb-5">Minhas Viagens</h1>
       {reservations.length > 0 ? (
         <div className="flex flex-col lg:grid lg:grid-cols-3 lg:gap-14">
           {reservations?.map((reservation) => (
@@ -55,7 +53,7 @@ export default function MyTrips() {
         </div>
       ) : (
         <div className="flex flex-col lg:max-w-[500px]">
-          <p className="mt-2 font-medium text-primaryDarker">
+          <p className="mt-2 font-medium">
             Você ainda não tem nenhuma reserva! =(
           </p>
 

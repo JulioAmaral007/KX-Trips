@@ -1,9 +1,8 @@
 'use client'
 
-import { Button } from '@/components/Button'
-import DatePicker from '@/components/DatePicker'
-import Input from '@/components/Input'
-
+import { Button } from '@/components/ui/button'
+import DatePicker from '@/components/ui/datePicker'
+import { Input } from '@/components/ui/input'
 import { differenceInDays } from 'date-fns'
 import { useRouter } from 'next/navigation'
 import { Controller, useForm } from 'react-hook-form'
@@ -90,8 +89,8 @@ export function TripReservation({
   const endDate = watch('endDate')
 
   return (
-    <div className="flex flex-col px-5 lg:min-w-[380px] lg:p-5 lg:border-grayLighter lg:border lg:rounded-lg lg:shadow-md">
-      <p className="text-xl hidden text-primaryDarker mb-4 lg:block">
+    <div className="flex flex-col px-5 lg:min-w-[380px] lg:p-5 lg: lg:border lg:rounded-lg lg:shadow-md">
+      <p className="text-xl hidden mb-4 lg:block">
         <span className="font-semibold">R${pricePerDay}</span> por dia
       </p>
 
@@ -155,14 +154,12 @@ export function TripReservation({
         })}
         placeholder={`Número de hóspedes (max: ${maxGuests})`}
         className="mt-4"
-        error={!!errors?.guests}
-        errorMessage={errors?.guests?.message}
         type="number"
       />
 
       <div className="flex justify-between mt-3">
-        <p className="font-medium text-sm text-primaryDarker">Total: </p>
-        <p className="font-medium text-sm text-primaryDarker">
+        <p className="font-medium text-sm">Total: </p>
+        <p className="font-medium text-sm">
           {startDate && endDate
             ? `R$${differenceInDays(endDate, startDate) * pricePerDay}` ?? 1
             : 'R$0'}

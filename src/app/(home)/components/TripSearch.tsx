@@ -1,10 +1,9 @@
 'use client'
 
-import { Button } from '@/components/Button'
-import { CurrencyInput } from '@/components/CurrencyInput'
-import DatePicker from '@/components/DatePicker'
-import Input from '@/components/Input'
-
+import { Button } from '@/components/ui/button'
+import { CurrencyInput } from '@/components/ui/currencyInput'
+import DatePicker from '@/components/ui/datePicker'
+import { Input } from '@/components/ui/input'
 import { useRouter } from 'next/navigation'
 import { Controller, useForm } from 'react-hook-form'
 
@@ -17,12 +16,7 @@ interface TripSearchForm {
 export function TripSearch() {
   const router = useRouter()
 
-  const {
-    control,
-    formState: { errors },
-    register,
-    handleSubmit,
-  } = useForm<TripSearchForm>()
+  const { control, register, handleSubmit } = useForm<TripSearchForm>()
 
   const onSubmit = (data: TripSearchForm) => {
     router.push(
@@ -33,15 +27,13 @@ export function TripSearch() {
   }
   return (
     <div className="container mx-auto p-5 bg-search-background bg-cover bg-center bg-no-repeat lg:py-28">
-      <h1 className="font-semibold text-2xl text-primaryDarker text-center lg:text-[2.5rem]">
+      <h1 className="font-semibold text-2xl text-center lg:text-[2.5rem]">
         Encontre sua próxima <span className="text-primary">viagem!</span>
       </h1>
 
       <div className="flex flex-col gap-4 mt-5 lg:flex-row lg:max-w-[948px] lg:mx-auto lg:p-4 lg:bg-primary lg:mt-12 lg:bg-opacity-20 lg:rounded-lg">
         <Input
           placeholder="Onde você quer ir?"
-          error={!!errors.text}
-          errorMessage={errors.text?.message}
           {...register('text', {
             required: {
               value: true,

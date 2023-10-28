@@ -1,4 +1,3 @@
-import { Button } from '@/components/Button'
 import {
   AlertDialog,
   AlertDialogAction,
@@ -10,6 +9,7 @@ import {
   AlertDialogTitle,
   AlertDialogTrigger,
 } from '@/components/ui/alert-dialog'
+import { Button } from '@/components/ui/button'
 import { Prisma } from '@prisma/client'
 import { format } from 'date-fns'
 import { ptBR } from 'date-fns/locale'
@@ -49,8 +49,8 @@ export function UserReservationItem({
   return (
     <div>
       {/* CARD */}
-      <div className="flex flex-col p-5 mt-5 border-grayLighter border-solid border shadow-lg rounded-lg">
-        <div className="flex items-center gap-3 pb-5 border-b border-grayLighter border-solid">
+      <div className="flex flex-col p-5 mt-5  border-solid border shadow-lg rounded-lg">
+        <div className="flex items-center gap-3 pb-5 border-b  border-solid">
           <div className="relative h-[106px] w-[124px]">
             <Image
               src={trip.coverImage}
@@ -62,19 +62,15 @@ export function UserReservationItem({
           </div>
 
           <div className="flex flex-col">
-            <h2 className="text-xl text-primaryDarker font-semibold">
-              {trip.name}
-            </h2>
+            <h2 className="text-xl font-semibold">{trip.name}</h2>
             <div className="flex items-center gap-1">
               <ReactCountryFlag countryCode={trip.countryCode} svg />
-              <p className="text-xs text-grayPrimary underline">
-                {trip.location}
-              </p>
+              <p className="text-xs  underline">{trip.location}</p>
             </div>
           </div>
         </div>
 
-        <div className="flex flex-col mt-5 text-primaryDarker">
+        <div className="flex flex-col mt-5">
           <h3 className="text-sm">Data</h3>
           <div className="flex items-center gap-1">
             <p className="text-sm">
@@ -93,12 +89,12 @@ export function UserReservationItem({
           <h3 className="mt-5 text-sm">Hóspedes</h3>
           <p className="text-sm pb-5">{reservation.guests} hóspedes</p>
 
-          <h3 className="font-semibold text-primaryDarker mt-3 pt-5 border-t border-solid border-grayLighter">
+          <h3 className="font-semibold mt-3 pt-5 border-t border-solid ">
             Informações sobre o preço
           </h3>
 
           <div className="flex justify-between mt-1">
-            <p className="text-primaryDarker text-sm mt-2">Total:</p>
+            <p className=" text-sm mt-2">Total:</p>
             <p className="font-medium text-sm">
               R${Number(reservation.totalPaid)}
             </p>
@@ -106,7 +102,7 @@ export function UserReservationItem({
 
           <AlertDialog>
             <AlertDialogTrigger>
-              <Button variant="danger" className="mt-5">
+              <Button variant="destructive" className="mt-5">
                 Cancelar
               </Button>
             </AlertDialogTrigger>
@@ -118,9 +114,7 @@ export function UserReservationItem({
                 </AlertDialogDescription>
               </AlertDialogHeader>
               <AlertDialogFooter className="text-white">
-                <AlertDialogCancel className="bg-primaryDarker">
-                  Cancel
-                </AlertDialogCancel>
+                <AlertDialogCancel className="">Cancel</AlertDialogCancel>
                 <AlertDialogAction onClick={handleDeleteClick}>
                   Continue
                 </AlertDialogAction>

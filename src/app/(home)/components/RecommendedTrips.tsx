@@ -1,4 +1,4 @@
-import { TripItem } from '@/components/TripItem'
+import { TripItem } from '@/components/ui/tripItem'
 import { prisma } from '@/lib/prisma'
 import { Trip } from '@prisma/client'
 
@@ -14,11 +14,11 @@ export async function RecommendedTrips() {
   return (
     <div className="container mx-auto p-5">
       <div className="flex items-center">
-        <div className="w-full h-[1px] bg-grayLighter"></div>
-        <h2 className="px-5 font-medium text-grayPrimary whitespace-nowrap">
+        <div className="w-full h-[1px]"></div>
+        <h2 className="px-5 font-medium whitespace-nowrap">
           Destinos Recomendados
         </h2>
-        <div className="w-full h-[1px] bg-grayLighter"></div>
+        <div className="w-full h-[1px] "></div>
       </div>
 
       <div className="flex flex-col items-center mt-5 lg:mt-12 gap-5 lg:flex-row lg:flex-wrap lg:justify-center lg:gap-10 md:flex-row md:flex-wrap md:justify-center">

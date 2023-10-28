@@ -1,18 +1,18 @@
 import React from 'react'
 
-import { Poppins } from 'next/font/google'
+import { Roboto } from 'next/font/google'
 
-import { Footer } from '@/components/Footer'
-
-import { NextAuthProvider } from '@/providers/auth'
-
-import { Header } from '@/components/Header'
 import ToastProvider from '@/providers/toast'
+
+import { Footer } from '@/components/ui/footer'
+import { Header } from '@/components/ui/header'
+import { NextAuthProvider } from '@/providers/auth'
 import './globals.css'
 
-const poppins = Poppins({
+const roboto = Roboto({
   subsets: ['latin'],
-  weight: ['400', '500', '600', '700', '800', '900'],
+  weight: ['400', '700', '500', '900'],
+  style: ['normal', 'italic'],
 })
 
 export const metadata = {
@@ -27,20 +27,16 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={poppins.className}>
-        <NextAuthProvider>
-          <ToastProvider>
-            <div className="flex flex-col h-screen">
-              <div className="h-[94px]">
-                <Header />
-              </div>
-
+      <body className={roboto.className}>
+        <div className="flex flex-col h-full">
+          <NextAuthProvider>
+            <ToastProvider>
+              <Header />
               <div className="flex-1">{children}</div>
-
               <Footer />
-            </div>
-          </ToastProvider>
-        </NextAuthProvider>
+            </ToastProvider>
+          </NextAuthProvider>
+        </div>
       </body>
     </html>
   )
