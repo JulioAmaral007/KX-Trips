@@ -5,11 +5,11 @@ export function QuickSearch() {
   return (
     <div className="container mx-auto p-5">
       <div className="flex items-center">
-        <div className="w-full h-[1px] "></div>
+        <div className="w-full h-[1px] bg-zinc-400"></div>
         <h2 className="px-5 font-medium  whitespace-nowrap">
           Tente pesquisar por
         </h2>
-        <div className="w-full h-[1px] "></div>
+        <div className="w-full h-[1px] bg-zinc-400"></div>
       </div>
 
       <div className="flex w-full justify-center mt-5 flex-wrap gap-5 lg:justify-evenly lg:gap-0 ">
